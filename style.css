@@ -1,0 +1,120 @@
+:root {
+  --background: #f9f9f9;
+  --calculator: #e0e0e0;
+  --border: #d1d1d1;
+  --btn: #f0f0f0;
+  --btn-var1: #0072c6;
+  --btn-border: #d1d1d1;
+  --btn-border-var: #0072c6;
+  --font: #333333;
+  --font-var: #ffffff;
+  --screen: #ffffff;
+  --screen-font: #333333;
+  --screen-border: #d1d1d1;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--background);
+  height: 100vh;
+  line-height: 1.6;
+  font-family: "Roboto", sans-serif;
+}
+
+button {
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Main */
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 75vh;
+  min-height: 500px;
+  padding: 10px;
+  margin-top: 50px;
+}
+.calculator {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  background-color: var(--calculator);
+  border: 3px solid var(--border);
+  border-radius: 15px;
+  padding: 25px;
+}
+
+.screen {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  border: 2px solid var(--screen-border);
+  border-radius: 5px;
+  margin-bottom: 20px;
+  text-align: right;
+  word-wrap: break-word;
+  word-break: break-all;
+  background-color: var(--screen);
+}
+
+.screen-last {
+  min-height: 32px;
+  font-size: 20px;
+}
+
+.screen-current {
+  min-height: 64px;
+  font-size: 40px;
+}
+
+.buttons-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.btn {
+  padding: 20px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 100%;
+  background-color: var(--btn);
+  font-size: 20px;
+  color: var(--font);
+  border: 2px solid var(--btn-border);
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
+}
+
+.btn-operator {
+  border-radius: 15px;
+  background-color: var(--btn-var1);
+  border: 2px solid var(--btn-border-var);
+  color: var(--font-var);
+}
+
+.btn-equals {
+  border-radius: 15px;
+}
+
+.span-3 {
+  grid-column: span 3;
+  border-radius: 15px;
+  background-color: var(--btn-var1);
+  border: 2px solid var(--btn-border-var);
+  color: var(--font-var);
+}
