@@ -1,5 +1,5 @@
 :root {
-  --background: #f9f9f9;
+  --background: #00549921;
   --calculator: #e0e0e0;
   --border: #d1d1d1;
   --btn: #f0f0f0;
@@ -112,16 +112,23 @@ button {
 }
 
 .btn-operator:active,
-.span-3:active {
+.span-2:active,
+.btn-delete:active {
   background-color: #0064ac;
+}
+
+.btn-delete {
+  border-radius: 15px;
+  background-color: var(--btn-var1);
+  color: var(--font-var);
 }
 
 .btn-equals {
   border-radius: 15px;
 }
 
-.span-3 {
-  grid-column: span 3;
+.span-2 {
+  grid-column: span 2;
   border-radius: 15px;
   background-color: var(--btn-var1);
   border: 2px solid var(--btn-border-var);

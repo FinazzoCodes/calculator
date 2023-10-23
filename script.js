@@ -8,6 +8,7 @@ const numberBtns = document.querySelectorAll(`[data-number]`);
 const decimalBtn = document.getElementById("decimalBtn");
 const operatorBtns = document.querySelectorAll(".btn-operator");
 const clearBtn = document.getElementById("clearBtn");
+const deleteBtn = document.getElementById("deleteBtn");
 const equalsBtn = document.getElementById("equalsBtn");
 const lastOperationScreen = document.getElementById("lastOperationScreen");
 const currentOperationScreen = document.getElementById(
@@ -32,6 +33,12 @@ const clear = () => {
   firstOperand = "";
   secondOperand = "";
   currentOperation = null;
+};
+
+const deleteNumber = () => {
+  currentOperationScreen.textContent = currentOperationScreen.textContent
+    .toString()
+    .slice(0, -1);
 };
 
 const appendDecimal = () => {
@@ -123,6 +130,7 @@ const operate = (operator, a, b) => {
 };
 
 window.addEventListener("keydown", handleKeyboardInput);
+deleteBtn.addEventListener("click", deleteNumber);
 equalsBtn.addEventListener("click", evaluate);
 clearBtn.addEventListener("click", clear);
 decimalBtn.addEventListener("click", appendDecimal);
