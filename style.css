@@ -1,11 +1,10 @@
 :root {
-  --background: #00549921;
+  --background: #f9f9f9;
   --calculator: #e0e0e0;
   --border: #d1d1d1;
   --btn: #f0f0f0;
   --btn-var1: #0072c6;
   --btn-border: #d1d1d1;
-  --btn-border-var: #0072c6;
   --font: #333333;
   --font-var: #ffffff;
   --screen: #ffffff;
@@ -19,6 +18,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  text-decoration: none;
 }
 
 body {
@@ -43,10 +43,10 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 75vh;
+  height: 55vh;
   min-height: 500px;
   padding: 10px;
-  margin-top: 50px;
+  margin-top: 200px;
 }
 .calculator {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
@@ -98,6 +98,7 @@ button {
 .btn:hover {
   transform: scale(1.05);
   transition: transform 0.2s ease;
+  background-color: rgba(247, 247, 247, 0.945);
 }
 
 .btn:active {
@@ -107,14 +108,20 @@ button {
 .btn-operator {
   border-radius: 15px;
   background-color: var(--btn-var1);
-  border: 2px solid var(--btn-border-var);
+  border: 2px solid var(--btn-border);
   color: var(--font-var);
 }
 
 .btn-operator:active,
 .span-2:active,
 .btn-delete:active {
-  background-color: #0064ac;
+  background-color: #006ebd;
+}
+
+.btn-operator:hover,
+.span-2:hover,
+.btn-delete:hover {
+  background-color: #007dd6;
 }
 
 .btn-delete {
@@ -131,6 +138,24 @@ button {
   grid-column: span 2;
   border-radius: 15px;
   background-color: var(--btn-var1);
-  border: 2px solid var(--btn-border-var);
+  border: 2px solid var(--btn-border);
   color: var(--font-var);
+}
+
+/* FOOTER */
+
+.footer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-size: 20px;
+}
+
+a {
+  color: #333333;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: rgb(0, 47, 255);
 }
