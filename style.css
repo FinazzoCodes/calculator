@@ -100,11 +100,20 @@ button {
   transition: transform 0.2s ease;
 }
 
+.btn:active {
+  background-color: #e7e7e7;
+}
+
 .btn-operator {
   border-radius: 15px;
   background-color: var(--btn-var1);
   border: 2px solid var(--btn-border-var);
   color: var(--font-var);
+}
+
+.btn-operator:active,
+.span-3:active {
+  background-color: #0064ac;
 }
 
 .btn-equals {
